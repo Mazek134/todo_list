@@ -10,7 +10,7 @@ from django.shortcuts import redirect
 def task_list(request):
 
     tasks = Task.objects.all()
-    pending_count = Task.objects.filter(status=True).count()
+
     if request.method == 'POST':
         form = task_form(request.POST)                  #utworzenie wypelnionego formularza na podstawie tego co jest w request.POST
         if form.is_valid():                              #sprawdzamy czy formularz jest wypelniony poprawnie
@@ -21,8 +21,11 @@ def task_list(request):
     else:
         form = task_form() # jesli nic nie wysylamy formularzem bo dopiero ladujemy strone to tylko go pokazujemy formularz z forms.py
 
+
+    all_tasks = Task.objects.all().count()
+    pending_count = Task.objects.filter(status=True).count() # wyjasnic dlaczego jak jest w tym miejscu to dziala ok
     return render(request,'ToDo/Task/task_list.html',
-                  {'tasks': tasks,'form':form, 'pending_count':pending_count} # zmienne ktore chce przekazac w tym szablonie
+                  {'tasks': tasks,'form':form, 'pending_count':pending_count,'all_tasks':all_tasks} # zmienne ktore chce przekazac w tym szablonie
                   )
 
 def change_status(request, pk):

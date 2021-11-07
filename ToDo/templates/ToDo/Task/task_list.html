@@ -11,6 +11,7 @@
 <div class="title_box">ToDo List</div>
 <div class="main_box">
 
+    {% if all_tasks <= 9 %}
     <div class="form_box">
 
             <div class="form_field">
@@ -27,6 +28,11 @@
 
 
     </div>
+    {% else %}
+    <div class="time_to_do">
+        now it's time do do it !
+    </div>
+    {% endif %}
 
             <div class="task_area">
                 <div class="global_btn">

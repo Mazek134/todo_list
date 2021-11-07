@@ -15,7 +15,6 @@ background-size:100% 100%
 
 .title_box{
 font-family: 'Bungee', cursive;
-
 text-align: center;
 font-size: 5rem;
 margin: 3% auto 1% auto;
@@ -41,9 +40,20 @@ box-shadow: 6px 24px 71px 3px rgba(66, 68, 90, 1);
 height: 50px;
 float : left;
 width: 100%;
-
-
 }
+
+
+.time_to_do {
+height: 50px;
+float : left;
+width: 100%;
+font-family: 'Bungee', cursive;
+text-align: center;
+font-size: 3rem;
+}
+
+
+
 .form_field {
 
 float: left;
