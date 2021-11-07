@@ -1,0 +1,173 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+html{
+height:100%;
+}
+
+body{
+height:100%;
+background:radial-gradient(circle at 45.01% -7.02%, #b247ef 0, #9841f1 25%, #783cf2 50%, #4b39f3 75%, #0038f4 100%);
+background-size:100% 100%
+}
+
+.title_box{
+font-family: 'Bungee', cursive;
+
+text-align: center;
+font-size: 5rem;
+margin: 3% auto 1% auto;
+width: 430px;
+height: 80px;
+
+}
+
+.main_box {
+padding-top: 40px;
+padding-bottom: 40px;
+width: 430px;
+height: auto;
+margin: 0 auto;
+#background-color: white;
+border-radius: 15px 15px;
+webkit-box-shadow: 6px 24px 71px 3px rgba(66, 68, 90, 1);
+moz-box-shadow: 6px 24px 71px 3px rgba(66, 68, 90, 1);
+box-shadow: 6px 24px 71px 3px rgba(66, 68, 90, 1);
+}
+
+.form_box {
+height: 50px;
+float : left;
+width: 100%;
+
+
+}
+.form_field {
+
+float: left;
+width: 70%;
+height: 100%;
+margin-left: 7%;
+
+}
+
+.form_btn {
+
+padding-left :1%;
+float: right;
+width: 15%;
+height: 100%;
+margin-right: 8%;
+
+text-align: center;
+}
+
+.global_btn{
+height:40px;
+
+}
+
+.task_area {
+width: 84%;
+min-height: 65%;
+margin: 0 auto;
+margin-top: 20%;
+}
+
+.single_row_p {
+padding-left:1%;
+padding-top:1.5%;
+font-family: 'Ubuntu', sans-serif;
+font-size: 1.8rem;
+margin-top: 10px;
+width: 100%;
+height: 40px;
+background-color: #F1F3F6;
+webkit-box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+moz-box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+}
+
+.single_row_d {
+padding-left:1%;
+padding-top:1.5%;
+font-family: 'Ubuntu', sans-serif;
+font-size: 1.8rem;
+margin-top: 10px;
+width: 100%;
+height: 40px;
+background-color: #A2A6A1;
+webkit-box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+moz-box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+box-shadow: -1px -1px 21px -1px rgba(66, 68, 90, 1);
+}
+
+.two_btn {
+float:right;
+width: 30%;
+height: 100%;
+}
+
+.done_btn{
+float:left;
+padding-top :1%;
+width: 50%;
+height: 100%;
+
+}
+
+.del_btn {
+padding-top :2%;
+float:right;
+width: 50%;
+height: 100%;
+
+}
+
+.glyphicon {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+
+}
+
+.red{
+color:#E75018;
+}
+
+.green {
+color: green;
+}
+
+.blue{
+color: blue;
+
+}
+.Django_form_field {
+
+    width: 100%;
+    height: 44px;
+}
+
+.btn btn-success{
+
+}
+
+
+.count_info{
+margin-top: 10%;
+padding-left:1%;
+font-family: 'Bungee', cursive;
+color:white;
+text-align:center;
+
+}
+
+'nowa czcionka'
+
+@font-face {
+    font-family: "Nowa czcionka";
+    src: url(fonts/new.ttf) format('truetype');
+}

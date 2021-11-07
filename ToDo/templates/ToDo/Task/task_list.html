@@ -1,0 +1,97 @@
+{% extends "ToDo/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<br>
+<div class="title_box">ToDo List</div>
+<div class="main_box">
+
+    <div class="form_box">
+
+            <div class="form_field">
+                <form method="POST" class="post-form">{% csrf_token %}
+
+                {{ form.as_p }}
+
+            </div>
+
+            <div class="form_btn">
+            <button type="submit" class="btn btn-success btn-lg">Add</button>
+                </form>
+            </div>
+
+
+    </div>
+
+            <div class="task_area">
+                <div class="global_btn">
+                    <a href="{% url 'ToDo:mark_all_done' %}">
+                    <button type="button"  class="btn btn-primary">Mark all as done</button>
+                    </a>
+                    <a href="{% url 'ToDo:delete_all' %}">
+                    <button type="button" class="btn btn-primary">Delete All</button>
+                    </a>
+                </div>
+
+                {% for task in tasks %}
+                {% if task.status == True %}
+                    <div class="single_row_p">
+
+
+                            {{task.task_desc}}
+                            <div class="two_btn">
+                            <div class="done_btn">
+                                <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+                            </div>
+                            <div class="del_btn">
+                            <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
+                            </div>
+                            </div>
+                    </div>
+                {% else %}
+                <div class="single_row_d">
+
+
+                            {{task.task_desc}}
+                            <div class="two_btn">
+
+                                {% if task.status == True %}
+
+                            <div class="done_btn">
+                                <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+
+                            </div>
+
+                                {% else %}
+
+                             <div class="done_btn">
+                                <a class="glyphicon glyphicon-repeat blue" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+                            </div>
+                               {% endif %}
+
+
+                            <div class="del_btn">
+                            <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
+                            </div>
+                            </div>
+                    </div>
+                {% endif %}
+                {% endfor %}
+                <div class = 'count_info' > You have {{pending_count}} pending tasks</div>
+            </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+{% endblock %}
