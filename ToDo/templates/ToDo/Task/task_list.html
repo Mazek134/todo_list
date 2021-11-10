@@ -37,10 +37,10 @@
             <div class="task_area">
                 <div class="global_btn">
                     <a href="{% url 'ToDo:mark_all_done' %}">
-                    <button type="button"  class="btn btn-primary">Mark all as done</button>
+                        <button type="button"  class="btn btn-primary">Mark all as done</button>
                     </a>
                     <a href="{% url 'ToDo:delete_all' %}">
-                    <button type="button" class="btn btn-primary">Delete All</button>
+                        <button type="button" class="btn btn-primary">Delete All</button>
                     </a>
                 </div>
 
@@ -51,12 +51,12 @@
 
                             {{task.task_desc}}
                             <div class="two_btn">
-                            <div class="done_btn">
-                                <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
-                            </div>
-                            <div class="del_btn">
-                            <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
-                            </div>
+                                <div class="done_btn">
+                                    <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+                                </div>
+                                 <div class="del_btn">
+                                    <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
+                                </div>
                             </div>
                     </div>
                 {% else %}
@@ -68,22 +68,22 @@
 
                                 {% if task.status == True %}
 
-                            <div class="done_btn">
-                                <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+                                <div class="done_btn">
+                                    <a class="glyphicon glyphicon-ok green" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
 
-                            </div>
+                                </div>
 
                                 {% else %}
 
-                             <div class="done_btn">
-                                <a class="glyphicon glyphicon-repeat blue" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
-                            </div>
+                                <div class="done_btn">
+                                     <a class="glyphicon glyphicon-repeat blue" href="{% url 'ToDo:change_status' pk=task.id %}"> </a>
+                                </div>
                                {% endif %}
 
 
-                            <div class="del_btn">
-                            <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
-                            </div>
+                                <div class="del_btn">
+                                    <a class="glyphicon glyphicon-trash red" href="{% url 'ToDo:delete_task' pk=task.id %}"> </a>
+                                </div>
                             </div>
                     </div>
                 {% endif %}
@@ -92,6 +92,9 @@
             </div>
 
 </div>
+    <div class="footer">
+
+    </div>
 
 
 
